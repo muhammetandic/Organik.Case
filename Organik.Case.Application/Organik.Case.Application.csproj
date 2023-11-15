@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Interfaces\" />
+    <None Remove="Validations\" />
+    <None Remove="Dtos\" />
+    <None Remove="MappingProfiles\" />
+    <None Remove="Interfaces\Services\" />
+    <None Remove="Dtos\Error\" />
+    <None Remove="Helpers\" />
+    <None Remove="Interfaces\Utils\" />
+    <None Remove="Interfaces\ExternalServices\" />
+    <None Remove="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="MappingProfiles\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Dtos\Error\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Interfaces\Utils\" />
+    <Folder Include="Interfaces\ExternalServices\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Organik.Case.Core\Organik.Case.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+</Project>
